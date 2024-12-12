@@ -1,15 +1,15 @@
 ```mermaid
-graph LR
-  Start --> A["Register<br>ES: 0<br>EF: 5<br>Slack: 0"]
-  A --> B["Login<br>ES: 5<br>EF: 10<br>Slack: 0"]
-  
-  B --> C["Create Products<br>ES: 10<br>EF: 15<br>Slack: 0"]
-  C --> D["Edit Products Information<br>ES: 15<br>EF: 20<br>Slack: 0"]
-  C --> E["Delete Product<br>ES: 20<br>EF: 25<br>Slack: 0"]
-  C --> F["Search Product By Name<br>ES: 20<br>EF: 25<br>Slack: 0"]
-  D --> G["Edit Profile<br>ES: 25<br>EF: 30<br>Slack: 0"]
-  
-  E --> Finish
-  F --> Finish
-  G --> Finish
+graph TD
+    Start[Start] --> A[Activity A<br>ออกแบบหน้าจอสมัครสมาชิก<br>ES: 0, EF: 2, Slack: 0]
+    Start --> B[Activity B<br>ออกแบบหน้าจอเข้าสู่ระบบ<br>ES: 0, EF: 2, Slack: 0]
+    A --> C[Activity C<br>พัฒนา API และฐานข้อมูลสมาชิก<br>ES: 2, EF: 5, Slack: 0]
+    B --> C
+    C --> D[Activity D<br>พัฒนา API และฐานข้อมูลสินค้า<br>ES: 5, EF: 9, Slack: 0]
+    D --> E[Activity E<br>พัฒนา UI/UX สำหรับจัดการสินค้า<br>ES: 9, EF: 12, Slack: 0]
+    D --> G[Activity G<br>ทดสอบระบบจัดการสินค้า<br>ES: 12, EF: 14, Slack: 0]
+    E --> G
+    A --> F[Activity F<br>ทดสอบระบบสมัครสมาชิกและเข้าสู่ระบบ<br>ES: 2, EF: 3, Slack: 9]
+    B --> F
+    G --> Finish[Finish]
+    F --> Finish
 
