@@ -1,5 +1,5 @@
 ```mermaid
-graph TD
+graph LR
     Start[Start] --> A[Activity A<br>ออกแบบหน้าจอสมัครสมาชิก<br>ES: 0, EF: 2, Slack: 0]
     Start --> B[Activity B<br>ออกแบบหน้าจอเข้าสู่ระบบ<br>ES: 0, EF: 2, Slack: 0]
     A --> C[Activity C<br>พัฒนา API และฐานข้อมูลสมาชิก<br>ES: 2, EF: 5, Slack: 0]
@@ -12,4 +12,3 @@ graph TD
     B --> F
     G --> Finish[Finish]
     F --> Finish
-
