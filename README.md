@@ -1,3 +1,4 @@
+```mermaid
 graph LR
   Start --> A["A<br>ES: 0<br>EF: 7<br>Slack: 2"]
   Start --> B["B<br>ES: 0<br>EF: 9<br>Slack: 0"]
